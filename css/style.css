@@ -1,0 +1,250 @@
+
+/* je code en mobile -first*/
+
+/* les styles généraux */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+
+}
+
+body, html {
+    width: 100%;
+    min-width: 300px;
+    height: 100vh;
+    padding: 5px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+}
+
+main {
+    padding: 0 5px;
+    width: 100%;
+    height: 96vh;
+}
+
+article {
+    width: 100%;
+    height: 95%;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+.illustration {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.illustration > svg {
+    object-fit: contain;
+
+}
+
+.none {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* les styles particuliers*/
+
+.message_logo {
+    width: 180px;
+    height: auto;
+}
+
+.message {
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+.message_text > h2{
+    font-size: 1.2rem;
+}
+
+.message_text > p{
+margin-bottom: 2rem;
+}
+
+/*.button {*/
+/*    padding: 0.8rem 1.2rem;*/
+/*    font-weight: bold;*/
+/*    margin-right: 0.5rem;*/
+
+/*}*/
+
+/*.button--fill {*/
+/*    background: #000;*/
+/*    color: #fff;*/
+/*    border: 1px solid #000;*/
+/*}*/
+
+/*.button--outline {*/
+/*    background: #fff;*/
+/*    color: #000;*/
+/*    border: 1px solid #000;*/
+/*}*/
+
+/*.button:hover {*/
+/*    color: #FFF;*/
+/*    background: #E30613;*/
+/*    border: 1px solid #000;*/
+
+/*}*/
+
+.social > a {
+    display: inline-block;
+    width: 2rem;
+    height: 1rem;
+    margin-top: 1.8rem;
+    margin-right: 0.4rem;
+}
+
+.social > a > img {
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 6px;
+    margin: 0;
+}
+
+.social > a:hover >img {
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* Flexboxs */
+.flex {
+    display: flex;
+}
+
+.column-r {
+    flex-direction: column-reverse;
+}
+
+
+/* la media quéries pour le desktop*/
+
+@media screen and (min-width: 720px) and (max-width: 912px) {
+    main {
+        max-width: 630px;
+        margin: 0 auto;
+    }
+
+    .flex {
+        display: initial;
+    }
+
+    .illustration {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 913px) {
+
+    /* les styles généraux */
+
+    main {
+        width: 86%;
+        max-width: 1460px;
+        margin: 0 auto;
+    }
+
+    article {
+        padding-top: 5%
+    }
+
+    .container {
+        margin: 3rem 0 0;
+    }
+
+    /* width : 45%*/
+
+    .illustration {
+        width: 60%;
+        height: 80%;
+    }
+
+    .box {
+        width: 30%;
+        height: 80%;
+    }
+
+    /* les styles particuliers*/
+
+
+    .message_text > h2,
+    .message_text > p,
+    .message_text > div  {
+        margin-bottom: 1.2rem;
+    }
+
+    .message_text > h2{
+        font-size: 1.8rem;
+        word-spacing: 3px;
+    }
+
+
+    /* Flexboxs */
+
+    .resp-row {
+        flex-direction: row;
+    }
+
+    .resp-jc-between {
+        justify-content: space-between;
+    }
+
+    .resp-content-center {
+        align-content: center;
+    }
+
+}
+
+/* animation */
+
+.fade-in-image:hover {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity: 0.5;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity: 0.5;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity: 0.5;}
+    100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity: 0.5;}
+    100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    80% {opacity: 0.5;}
+    100% {opacity:1;}
+}
